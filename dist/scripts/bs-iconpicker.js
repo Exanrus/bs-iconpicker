@@ -1,11 +1,19 @@
 /**
- * bs-iconpicker
- *
- * @version   v0.1.4
- * @author    Justin Lau <justin@tclau.com>
- * @copyright Copyright (c) 2014 Justin Lau <justin@tclau.com>
- * @license   The MIT License (MIT)
- * 
+           * bs-iconpicker
+           *
+           * @version   v0.0.1
+           * @author    Max Manets <manets@gmail.com>
+           * @copyright Copyright (c) 2014 Max Manets <manets@gmail.com>
+           * @license   The MIT License (MIT)
+           *
+           * Based on
+           * ui-iconpicker
+           *
+           * @version   v0.1.4
+           * @author    Justin Lau <justin@tclau.com>
+           * @copyright Copyright (c) 2014 Justin Lau <justin@tclau.com>
+           * @license   The MIT License (MIT)
+           *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the 'Software'), to deal
  * in the Software without restriction, including without limitation the rights
@@ -128,6 +136,20 @@
             return classes;
           };
 
+          IconGroupCollection.prototype.getDropdownDataArray = function(clickAction) {
+            var cls, dropdown, i;
+            cls = this.getClassArray();
+            dropdown = [];
+            for (i in cls) {
+              classes.push({
+                "class": cls[i],
+                "text": "<span class=\"" + cls[i] + "\"></span>",
+                "click": clickAction
+              });
+            }
+            return dropdown;
+          };
+
           return IconGroupCollection;
 
         })();
@@ -142,7 +164,7 @@
 
   umd = function(root, factory) {
     if (typeof define === "function" && (define.amd != null)) {
-      return define("templates/iconpicker", ["angular", "angular-bootstrap"], factory);
+      return define("templates/iconpicker", ["angular", "angular-strap"], factory);
     } else {
       return factory(root.angular);
     }
@@ -150,10 +172,10 @@
 
   umd(this, function(angular) {
     var module;
-    module = angular.module("bs-iconpicker/templates/iconpicker", ["ui.bootstrap"]);
+    module = angular.module("bs-iconpicker/templates/iconpicker", ["mgcrea.ngStrap.dropdown"]);
     return module.run([
       "$templateCache", function($templateCache) {
-        return $templateCache.put("templates/iconpicker.html", "<span class=\"btn-group bs-iconpicker\" ng-class=\"{ disabled: disabled }\">\n	<button type=\"button\" class=\"btn btn-default dropdown-toggle\"><i class=\"{{ iconClass }}\"></i><span class=\"caret\"></span>\n	</button>\n	<ul class=\"dropdown-menu\" role=\"menu\">\n		<li ng-repeat=\"class in availableIconClasses\">\n			<button class=\"btn btn-default\" type=\"button\" ng-click=\"$parent.iconClass = class\"><span class=\"{{ class }}\"></span></button>\n		</li>\n	</ul>\n	<input name=\"{{ name }}\" type=\"hidden\" value=\"{{ iconClass }}\" ng-if=\"name\" />\n</span>");
+        return $templateCache.put("templates/iconpicker.html", "<span class=\"btn-group bs-iconpicker\">\n  <button type=\"button\" class=\"btn\" data-html=\"true\" bs-dropdown=\"availableIconClassesDropdown\">\n    <i class=\"{{iconClass}}\"></i>\n    <span class=\"caret\"></span>\n  </button>\n  <input name=\"{{name}}\" type=\"hidden\" value=\"{{iconClass}}\" />\n</span>");
       }
     ]);
   });
@@ -174,9 +196,9 @@
   umd(this, function(angular) {
     var module;
     module = angular.module("bs-iconpicker/directives/bs-iconpicker", ["bs-iconpicker/services/IconGroupCollection", "bs-iconpicker/templates/iconpicker"]);
-    return module.directive("uiIconpicker", [
+    return module.directive("bsIconpicker", [
       "IconGroupCollection", function(IconGroupCollection) {
-        return {
+        ({
           replace: true,
           restrict: "E",
           scope: {
@@ -185,22 +207,27 @@
           },
           templateUrl: "templates/iconpicker.html",
           link: function($scope, $element, attrs) {
-            var _ref;
-            $scope.availableIconClasses = (new IconGroupCollection(attrs.groups)).getClassArray();
+            var iconGroupCollection, _ref;
+            iconGroupCollection = new IconGroupCollection(attrs.groups);
+            $scope.availableIconClasses = iconGroupCollection.getClassArray();
+            $scope.availableIconClassesDropdown = iconGroupCollection.getDropdownDataArray($scope.setIconClass);
             $scope.iconClass = (_ref = attrs.value) != null ? _ref : $scope.availableIconClasses[0];
-            if (attrs.ngModel) {
-              $scope.model = $scope[attrs.ngModel];
-              $scope.$watch("iconClass", function() {
-                return $scope.model = $scope.iconClass;
-              });
-              $scope.$watch("model", function() {
-                return $scope.iconClass = $scope.model;
-              });
-            }
-            $scope.$dropdownButton = $element.find("button").eq(0);
-            return $scope.disabled = attrs.disabled != null;
+            return $scope.setIconClass = function(e) {
+              return $scope.iconClass = e.$parent.item["class"];
+            };
           }
-        };
+        });
+        if (attrs.ngModel) {
+          $scope.model = $scope[attrs.ngModel];
+          $scope.$watch("iconClass", function() {
+            return $scope.model = $scope.iconClass;
+          });
+          $scope.$watch("model", function() {
+            return $scope.iconClass = $scope.model;
+          });
+        }
+        $scope.$dropdownButton = $element.find("button").eq(0);
+        return $scope.disabled = attrs.disabled != null;
       }
     ]);
   });

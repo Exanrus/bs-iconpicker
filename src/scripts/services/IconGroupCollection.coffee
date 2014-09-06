@@ -94,13 +94,13 @@ umd this, (angular) ->
 
 				# usage: array = iconsets.getDropdownDataArray()
 				getDropdownDataArray: (clickAction)->
-          classes = @getClassArray();
+          cls = @getClassArray();
           dropdown = [];
 
-          for cls of classes
+          for i of cls
             classes.push
-              "class": cls,
-              "text": "<span class=\"#{cls}\"></span>",
+              "class": cls[i],
+              "text": "<span class=\"#{cls[i]}\"></span>",
               "click": clickAction
 
           return dropdown;

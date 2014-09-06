@@ -30,7 +30,7 @@
     "grunt-contrib-bump": "git://github.com/gruntjs/grunt-contrib-bump",
     "grunt-contrib-clean": "~0.5.0",
     "grunt-contrib-coffee": "~0.10.1",
-    "grunt-contrib-compass": "~0.7.2",
+    "grunt-contrib-compass": "^1.0.0",
     "grunt-contrib-cssmin": "~0.9.0",
     "grunt-contrib-requirejs": "~0.4.3",
     "grunt-contrib-watch": "~0.6.1",
