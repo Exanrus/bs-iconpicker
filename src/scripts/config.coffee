@@ -1,3 +1,14 @@
+# bs-iconpicker
+#
+# @version   v0.0.1
+# @author    Max Manets <manets@gmail.com>
+# @copyright Copyright (c) 2014 Max Manets <manets@gmail.com>
+# @license   The MIT License (MIT)
+#
+# Based on
+# ui-iconpicker
+#
+# @version   v0.1.4
 # @author    Justin Lau <justin@tclau.com>
 # @copyright Copyright (c) 2014 Justin Lau <justin@tclau.com>
 # @license   The MIT License (MIT)
@@ -24,8 +35,8 @@
 require.config
 
 	paths:
-		"angular"           : "empty:"
-		"angular-bootstrap" : "empty:"
+		"angular"       : "empty:"
+		"angular-strap" : "empty:"
 
 	shim:
 		"angular-bootstrap":

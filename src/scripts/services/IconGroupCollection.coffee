@@ -1,3 +1,14 @@
+# bs-iconpicker
+#
+# @version   v0.0.1
+# @author    Max Manets <manets@gmail.com>
+# @copyright Copyright (c) 2014 Max Manets <manets@gmail.com>
+# @license   The MIT License (MIT)
+#
+# Based on
+# ui-iconpicker
+#
+# @version   v0.1.4
 # @author    Justin Lau <justin@tclau.com>
 # @copyright Copyright (c) 2014 Justin Lau <justin@tclau.com>
 # @license   The MIT License (MIT)
@@ -37,8 +48,8 @@ umd = (root, factory) ->
 umd this, (angular) ->
 
 	# Register Angular Module
-	module = angular.module("ui-iconpicker/services/IconGroupCollection", [
-		"ui-iconpicker/values/icon-groups-map"
+	module = angular.module("bs-iconpicker/services/IconGroupCollection", [
+		"bs-iconpicker/values/icon-groups-map"
 	]);
 
 	module.factory "IconGroupCollection", [
@@ -80,4 +91,17 @@ umd this, (angular) ->
 						classes.push(group.prefix + iconClass) for iconClass in group.classes;
 
 					return classes;
-	]
+
+				# usage: array = iconsets.getDropdownDataArray()
+				getDropdownDataArray: (clickAction)->
+          classes = @getClassArray();
+          dropdown = [];
+
+          for cls of classes
+            classes.push
+              "class": cls,
+              "text": "<span class=\"#{cls}\"></span>",
+              "click": clickAction
+
+          return dropdown;
+  ]

@@ -1,32 +1,25 @@
-# ui-iconpicker - _Bootstrap 3 Icon Picker for AngularJS_ #
+# bs-iconpicker - _Bootstrap 3 Icon Picker for AngularJS_ #
 
-[![Bower version](https://badge.fury.io/bo/ui-iconpicker.png)](http://badge.fury.io/bo/ui-iconpicker)
+[![Bower version](https://badge.fury.io/bo/bs-iconpicker.png)](http://badge.fury.io/bo/bs-iconpicker)
 [![devDependencies Status](https://david-dm.org/justin-lau/ui-iconpicker/dev-status.png)](https://david-dm.org/justin-lau/ui-iconpicker#info=devDependencies)
 
 
-ui-iconpicker is a [Bootstrap]([Bootstrap](http://getbootstrap.com/)) (and
+bs-iconpicker is a [Bootstrap]([Bootstrap](http://getbootstrap.com/)) (and
 optionally [Font Awesome](http://fortawesome.github.io/Font-Awesome/)) icons
 picking component implemented in [AngularJS](https://angularjs.org/).
-
-
-
-## Demo ##
-
-To see the directive in action, visit http://justin-lau.github.io/ui-iconpicker/.
-
 
 
 ## Usage ##
 
 ### Dependencies ###
-ui-iconpicker depends only on
-[Angular UI Bootstrap](http://angular-ui.github.io/bootstrap/), and thus also
+bs-iconpicker depends only on
+[Angular-Strap](https://github.com/mgcrea/angular-strap), and thus also
 depends on [AngularJS](https://angularjs.org/) and
 [Bootstrap](http://getbootstrap.com/)'s CSS. It also supports
 [Font Awesome](http://fortawesome.github.io/Font-Awesome/) icons.
 
 ### Installation ###
-Normally you would use ui-iconpicker like this:
+Normally you would use bs-iconpicker like this:
 
 ```html
 <html>
@@ -37,53 +30,55 @@ Normally you would use ui-iconpicker like this:
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
 	<!-- AngularJS CSP CSS -->
 	<link rel="stylesheet" href="//rawgithub.com/angular/code.angularjs.org/master/1.2.16/angular-csp.css">
-	<!-- ui-iconpicker CSS -->
-	<link rel="stylesheet" href="//rawgithub.com/justin-lau/ui-iconpicker/v0.1.4/dist/styles/ui-iconpicker.min.css">
+	<!-- bs-iconpicker CSS -->
+	<link rel="stylesheet" href="//rawgithub.com/m-mts/bs-iconpicker/v0.0.1/dist/styles/bs-iconpicker.min.css">
 </head>
 <body ng-app>
 	<!-- Body Content -->
 
 	<!-- AngularJS Script -->
 	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
-	<!-- Angular UI Boostrap Script -->
-	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.min.js"></script>
-	<!-- ui-iconpicker Script -->
-	<script type="text/javascript" src="//rawgithub.com/justin-lau/ui-iconpicker/v0.1.4/dist/scripts/ui-iconpicker.min.js"></script>
+	<!-- Angular Strap Script -->
+	<script src="bower_components/angular-strap/dist/angular-strap.min.js"></script>
+    <script src="bower_components/angular-strap/dist/angular-strap.tpl.min.js"></script>
+	<!-- bs-iconpicker Script -->
+	<script type="text/javascript" src="//rawgithub.com/m-mts/bs-iconpicker/v0.0.1/dist/scripts/bs-iconpicker.min.js"></script>
 	<script>
 		
-		// load ui-iconpicker as Angular dependency
-		angular.module('myModule', ['ui-iconpicker']);
+		// load bs-iconpicker as Angular dependency
+		angular.module('myModule', ['bs-iconpicker']);
 
 	</script>
 </body>
 </html>
 ```
 
-ui-iconpicker also supports the AMD API ([RequireJS](http://requirejs.org/)),
+bs-iconpicker also supports the AMD API ([RequireJS](http://requirejs.org/)),
 the same scripts from above would look like the following with RequireJS:
 
 ```javascript
 require.config({
 	paths: {
 		'angular': '//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min',
-		'angular-bootstrap': '//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.min',
-		'ui-iconpicker': '//rawgithub.com/justin-lau/ui-iconpicker/v0.1.4/dist/scripts/ui-iconpicker.min',
+		'angular-strap': 'bower_components/angular-strap/dist/angular-strap.min.js',
+		'angular-strap-templates': 'bower_components/angular-strap/dist/angular-strap.tpl.min.js',
+		'bs-iconpicker': '//rawgithub.com/m-mts/bs-iconpicker/v0.0.1/dist/scripts/bs-iconpicker.min',
 	},
 
 	shim: {
 		'angular': {
 			exports: 'angular',
 		},
-		'angular-bootstrap': {
+		'angular-strap': {
 			deps: ['angular'],
 		},
 	},
 });
 
-require(['angular', 'ui-iconpicker'], function (angular) {
+require(['angular', 'bs-iconpicker'], function (angular) {
 
-	// load ui-iconpicker as Angular dependency
-	angular.module('myModule', ['ui-iconpicker']);
+	// load bs-iconpicker as Angular dependency
+	angular.module('myModule', ['bs-iconpicker']);
 
 });
 ```

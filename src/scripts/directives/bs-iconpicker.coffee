@@ -1,3 +1,14 @@
+# bs-iconpicker
+#
+# @version   v0.0.1
+# @author    Max Manets <manets@gmail.com>
+# @copyright Copyright (c) 2014 Max Manets <manets@gmail.com>
+# @license   The MIT License (MIT)
+#
+# Based on
+# ui-iconpicker
+#
+# @version   v0.1.4
 # @author    Justin Lau <justin@tclau.com>
 # @copyright Copyright (c) 2014 Justin Lau <justin@tclau.com>
 # @license   The MIT License (MIT)
@@ -25,7 +36,7 @@ umd = (root, factory) ->
 
 	# AMD
 	if typeof define is "function" and define.amd?
-		define("directives/ui-iconpicker", [
+		define("directives/bs-iconpicker", [
 			"angular"
 			"services/IconGroupCollection"
 			"templates/iconpicker"
@@ -38,12 +49,12 @@ umd = (root, factory) ->
 umd this, (angular) ->
 
 	# Register Angular Module
-	module = angular.module("ui-iconpicker/directives/ui-iconpicker", [
-		"ui-iconpicker/services/IconGroupCollection"
-		"ui-iconpicker/templates/iconpicker"
+	module = angular.module("bs-iconpicker/directives/bs-iconpicker", [
+		"bs-iconpicker/services/IconGroupCollection"
+		"bs-iconpicker/templates/iconpicker"
 	]);
 
-	module.directive "uiIconpicker", [
+	module.directive "bsIconpicker", [
 		"IconGroupCollection"
 		(IconGroupCollection) ->
 			replace: true
@@ -53,10 +64,13 @@ umd this, (angular) ->
 				model : "=?ngModel"
 			templateUrl: "templates/iconpicker.html"
 			link: ($scope, $element, attrs) ->
-				$scope.availableIconClasses = (new IconGroupCollection(attrs.groups)).getClassArray();
-				$scope.iconClass = attrs.value ? $scope.availableIconClasses[0];
-				
-				# setup two way bindings between $scope.iconClass and $scope.model
+        iconGroupCollection = new IconGroupCollection(attrs.groups);
+        $scope.availableIconClasses = iconGroupCollection.getClassArray();
+        $scope.availableIconClassesDropdown = iconGroupCollection.getDropdownDataArray($scope.setIconClass);
+        $scope.iconClass = attrs.value ? $scope.availableIconClasses[0];
+        $scope.setIconClass = (e) ->
+          $scope.iconClass = e.$parent.item.class;
+        # setup two way bindings between $scope.iconClass and $scope.model
 				# when ng-model is found in the DOM attribute.
 				if attrs.ngModel
 					$scope.model = $scope[attrs.ngModel];

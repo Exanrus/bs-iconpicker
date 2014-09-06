@@ -1,5 +1,5 @@
 /**
- * ui-iconpicker
+ * bs-iconpicker
  *
  * @version   v0.1.4
  * @author    Justin Lau <justin@tclau.com>
@@ -37,7 +37,7 @@
 
   umd(this, function(angular) {
     var module;
-    module = angular.module("ui-iconpicker/values/icon-groups-map", []);
+    module = angular.module("bs-iconpicker/values/icon-groups-map", []);
     return module.value("iconGroupsMap", {
       "bootstrap": {
         prefix: "glyphicon glyphicon-",
@@ -65,7 +65,7 @@
 
   umd(this, function(angular) {
     var module;
-    module = angular.module("ui-iconpicker/services/IconGroupCollection", ["ui-iconpicker/values/icon-groups-map"]);
+    module = angular.module("bs-iconpicker/services/IconGroupCollection", ["bs-iconpicker/values/icon-groups-map"]);
     return module.factory("IconGroupCollection", [
       "iconGroupsMap", function(iconGroupsMap) {
         var IconGroupCollection;
@@ -150,10 +150,10 @@
 
   umd(this, function(angular) {
     var module;
-    module = angular.module("ui-iconpicker/templates/iconpicker", ["ui.bootstrap"]);
+    module = angular.module("bs-iconpicker/templates/iconpicker", ["ui.bootstrap"]);
     return module.run([
       "$templateCache", function($templateCache) {
-        return $templateCache.put("templates/iconpicker.html", "<span class=\"btn-group ui-iconpicker\" ng-class=\"{ disabled: disabled }\">\n	<button type=\"button\" class=\"btn btn-default dropdown-toggle\"><i class=\"{{ iconClass }}\"></i><span class=\"caret\"></span>\n	</button>\n	<ul class=\"dropdown-menu\" role=\"menu\">\n		<li ng-repeat=\"class in availableIconClasses\">\n			<button class=\"btn btn-default\" type=\"button\" ng-click=\"$parent.iconClass = class\"><span class=\"{{ class }}\"></span></button>\n		</li>\n	</ul>\n	<input name=\"{{ name }}\" type=\"hidden\" value=\"{{ iconClass }}\" ng-if=\"name\" />\n</span>");
+        return $templateCache.put("templates/iconpicker.html", "<span class=\"btn-group bs-iconpicker\" ng-class=\"{ disabled: disabled }\">\n	<button type=\"button\" class=\"btn btn-default dropdown-toggle\"><i class=\"{{ iconClass }}\"></i><span class=\"caret\"></span>\n	</button>\n	<ul class=\"dropdown-menu\" role=\"menu\">\n		<li ng-repeat=\"class in availableIconClasses\">\n			<button class=\"btn btn-default\" type=\"button\" ng-click=\"$parent.iconClass = class\"><span class=\"{{ class }}\"></span></button>\n		</li>\n	</ul>\n	<input name=\"{{ name }}\" type=\"hidden\" value=\"{{ iconClass }}\" ng-if=\"name\" />\n</span>");
       }
     ]);
   });
@@ -165,7 +165,7 @@
 
   umd = function(root, factory) {
     if (typeof define === "function" && (define.amd != null)) {
-      return define("directives/ui-iconpicker", ["angular", "services/IconGroupCollection", "templates/iconpicker"], factory);
+      return define("directives/bs-iconpicker", ["angular", "services/IconGroupCollection", "templates/iconpicker"], factory);
     } else {
       return factory(root.angular);
     }
@@ -173,7 +173,7 @@
 
   umd(this, function(angular) {
     var module;
-    module = angular.module("ui-iconpicker/directives/ui-iconpicker", ["ui-iconpicker/services/IconGroupCollection", "ui-iconpicker/templates/iconpicker"]);
+    module = angular.module("bs-iconpicker/directives/bs-iconpicker", ["bs-iconpicker/services/IconGroupCollection", "bs-iconpicker/templates/iconpicker"]);
     return module.directive("uiIconpicker", [
       "IconGroupCollection", function(IconGroupCollection) {
         return {
@@ -212,14 +212,14 @@
 
   umd = function(root, factory) {
     if (typeof define === "function" && (define.amd != null)) {
-      return define("ui-iconpicker", ["angular", "directives/ui-iconpicker"], factory);
+      return define("bs-iconpicker", ["angular", "directives/bs-iconpicker"], factory);
     } else {
       return factory(root.angular);
     }
   };
 
   umd(this, function(angular) {
-    return angular.module("ui-iconpicker", ["ui-iconpicker/directives/ui-iconpicker"]);
+    return angular.module("bs-iconpicker", ["bs-iconpicker/directives/bs-iconpicker"]);
   });
 
 }).call(this);

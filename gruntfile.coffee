@@ -1,3 +1,14 @@
+# bs-iconpicker
+#
+# @version   v0.0.1
+# @author    Max Manets <manets@gmail.com>
+# @copyright Copyright (c) 2014 Max Manets <manets@gmail.com>
+# @license   The MIT License (MIT)
+#
+# Based on
+# ui-iconpicker
+#
+# @version   v0.1.4
 # @author    Justin Lau <justin@tclau.com>
 # @copyright Copyright (c) 2014 Justin Lau <justin@tclau.com>
 # @license   The MIT License (MIT)
@@ -46,13 +57,21 @@ module.exports = (grunt) ->
 		banner:
 			full : """
 					/**
-					 * ui-iconpicker
-					 *
-					 * @version   v<%= pkg.version %>
-					 * @author    Justin Lau <justin@tclau.com>
-					 * @copyright Copyright (c) 2014 Justin Lau <justin@tclau.com>
-					 * @license   The MIT License (MIT)
-					 * 
+           * bs-iconpicker
+           *
+           * @version   v0.0.1
+           * @author    Max Manets <manets@gmail.com>
+           * @copyright Copyright (c) 2014 Max Manets <manets@gmail.com>
+           * @license   The MIT License (MIT)
+           *
+           * Based on
+           * ui-iconpicker
+           *
+           * @version   v0.1.4
+           * @author    Justin Lau <justin@tclau.com>
+           * @copyright Copyright (c) 2014 Justin Lau <justin@tclau.com>
+           * @license   The MIT License (MIT)
+           *
 					 * Permission is hereby granted, free of charge, to any person obtaining a copy
 					 * of this software and associated documentation files (the 'Software'), to deal
 					 * in the Software without restriction, including without limitation the rights
@@ -73,8 +92,8 @@ module.exports = (grunt) ->
 					 */"""
 			min  : """
 					/*
-					 ui-iconpicker v<%= pkg.version %>
-					 (c) 2014 Justin Lau http://justin-lau.github.io/ui-iconpicker/
+					 bs-iconpicker v<%= pkg.version %>
+					 (c) 2014 Max Manets https://github.com/m-mts/bs-iconpicker.git
 					 License: MIT
 					*/"""
 		pkg: grunt.file.readJSON "package.json"
@@ -128,7 +147,7 @@ module.exports = (grunt) ->
 			options:
 				cssDir  : "<%= path.dist %>/styles"
 				sassDir : "<%= path.src %>/styles"
-				specify : "<%= path.src %>/styles/ui-iconpicker.scss"
+				specify : "<%= path.src %>/styles/bs-iconpicker.scss"
 			debug:
 				options:
 					environment : "development"
@@ -208,20 +227,20 @@ module.exports = (grunt) ->
 			options:
 				baseUrl        : "<%= path.src %>/scripts"
 				mainConfigFile : "<%= path.src %>/scripts/config.js"
-				name           : "ui-iconpicker"
+				name           : "bs-iconpicker"
 			debug:
 				options:
 					generateSourceMaps : true
 					optimize           : "none"
-					out                : "<%= path.dist %>/scripts/ui-iconpicker.js"
+					out                : "<%= path.dist %>/scripts/bs-iconpicker.js"
 			dist:
 				options:
 					optimize : "none"
-					out      : "<%= path.dist %>/scripts/ui-iconpicker.js"
+					out      : "<%= path.dist %>/scripts/bs-iconpicker.js"
 			dist_min:
 				options:
 					optimize : "uglify2"
-					out      : "<%= path.dist %>/scripts/ui-iconpicker.min.js"
+					out      : "<%= path.dist %>/scripts/bs-iconpicker.min.js"
 
 		###
 		**Watch**

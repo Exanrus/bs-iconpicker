@@ -1,3 +1,14 @@
+# bs-iconpicker
+#
+# @version   v0.0.1
+# @author    Max Manets <manets@gmail.com>
+# @copyright Copyright (c) 2014 Max Manets <manets@gmail.com>
+# @license   The MIT License (MIT)
+#
+# Based on
+# ui-iconpicker
+#
+# @version   v0.1.4
 # @author    Justin Lau <justin@tclau.com>
 # @copyright Copyright (c) 2014 Justin Lau <justin@tclau.com>
 # @license   The MIT License (MIT)
@@ -25,9 +36,9 @@ umd = (root, factory) ->
 	
 	# AMD
 	if typeof define is "function" and define.amd?
-		define("ui-iconpicker", [
+		define("bs-iconpicker", [
 			"angular"
-			"directives/ui-iconpicker"
+			"directives/bs-iconpicker"
 		], factory);
 
 	# Non-AMD
@@ -37,6 +48,6 @@ umd = (root, factory) ->
 umd this, (angular) ->
 
 	# Register Angular Module
-	angular.module("ui-iconpicker", [
-		"ui-iconpicker/directives/ui-iconpicker"
+	angular.module("bs-iconpicker", [
+		"bs-iconpicker/directives/bs-iconpicker"
 	]);

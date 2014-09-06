@@ -1,3 +1,14 @@
+# bs-iconpicker
+#
+# @version   v0.0.1
+# @author    Max Manets <manets@gmail.com>
+# @copyright Copyright (c) 2014 Max Manets <manets@gmail.com>
+# @license   The MIT License (MIT)
+#
+# Based on
+# ui-iconpicker
+#
+# @version   v0.1.4
 # @author    Justin Lau <justin@tclau.com>
 # @copyright Copyright (c) 2014 Justin Lau <justin@tclau.com>
 # @license   The MIT License (MIT)
@@ -36,7 +47,7 @@ umd = (root, factory) ->
 umd this, (angular) ->
 
 	# Register Angular Module
-	module = angular.module("ui-iconpicker/values/icon-groups-map", []);
+	module = angular.module("bs-iconpicker/values/icon-groups-map", []);
 
 	module.value "iconGroupsMap",
 		"bootstrap" : 

@@ -1,3 +1,14 @@
+# bs-iconpicker
+#
+# @version   v0.0.1
+# @author    Max Manets <manets@gmail.com>
+# @copyright Copyright (c) 2014 Max Manets <manets@gmail.com>
+# @license   The MIT License (MIT)
+#
+# Based on
+# ui-iconpicker
+#
+# @version   v0.1.4
 # @author    Justin Lau <justin@tclau.com>
 # @copyright Copyright (c) 2014 Justin Lau <justin@tclau.com>
 # @license   The MIT License (MIT)
@@ -27,7 +38,7 @@ umd = (root, factory) ->
 	if typeof define is "function" and define.amd?
 		define("templates/iconpicker", [
 			"angular"
-			"angular-bootstrap"
+			"angular-strap"
 		], factory);
 
 	# Non-AMD
@@ -37,8 +48,8 @@ umd = (root, factory) ->
 umd this, (angular) ->
 
 	# Register Angular Module
-	module = angular.module("ui-iconpicker/templates/iconpicker", [
-		"ui.bootstrap"
+	module = angular.module("bs-iconpicker/templates/iconpicker", [
+		"mgcrea.ngStrap.dropdown"
 	]);
 
 	# Create template into cache
@@ -47,15 +58,12 @@ umd this, (angular) ->
 		($templateCache) ->
 			$templateCache.put "templates/iconpicker.html",
 				"""
-				<span class="btn-group ui-iconpicker" ng-class="{ disabled: disabled }">
-					<button type="button" class="btn btn-default dropdown-toggle"><i class="{{ iconClass }}"></i><span class="caret"></span>
-					</button>
-					<ul class="dropdown-menu" role="menu">
-						<li ng-repeat="class in availableIconClasses">
-							<button class="btn btn-default" type="button" ng-click="$parent.iconClass = class"><span class="{{ class }}"></span></button>
-						</li>
-					</ul>
-					<input name="{{ name }}" type="hidden" value="{{ iconClass }}" ng-if="name" />
-				</span>
+          <span class="btn-group bs-iconpicker">
+            <button type="button" class="btn" data-html="true" bs-dropdown="availableIconClassesDropdown">
+              <i class="{{iconClass}}"></i>
+              <span class="caret"></span>
+            </button>
+            <input name="{{name}}" type="hidden" value="{{iconClass}}" />
+          </span>
 				"""
 	]

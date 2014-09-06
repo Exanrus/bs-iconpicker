@@ -1,26 +1,26 @@
 {
-  "name": "ui-iconpicker",
+  "name": "bs-iconpicker",
   "description": "Bootstrap 3 Icon Picker for AngularJS",
-  "version": "0.1.4",
+  "version": "0.0.1",
   "keywords": [
     "Bootstrap",
     "Font Awesome",
     "Iconpicker",
-    "AngularJS"
+    "AngularJS",
+    "Angular-strap"
   ],
   "bugs": {
-    "url": "https://github.com/justin-lau/ui-iconpicker/issues",
+    "url": "https://github.com/m-mts/bs-iconpicker/issues",
     "email": "justin@tclau.com"
   },
   "license": "MIT",
   "auther": {
-    "name": "Justin Lau",
-    "email": "justin@tclau.com",
-    "url": "http://tclau.com"
+    "name": "Max Manets",
+    "email": "manets@gmail.com"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/justin-lau/ui-iconpicker"
+    "url": "https://github.com/m-mts/bs-iconpicker.git"
   },
   "engines": {
     "node": ">=0.10.25"
