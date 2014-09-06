@@ -4,6 +4,7 @@
 /src/scripts/**/*.js
 /src/scripts/**/*.js.map
 /temp
+/.idea
 .DS_Store
 sftp-config.json
 Thumbs.db
