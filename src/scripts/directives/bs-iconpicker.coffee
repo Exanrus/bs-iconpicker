@@ -64,13 +64,13 @@ umd this, (angular) ->
 				model : "=?ngModel"
 			templateUrl: "templates/iconpicker.html"
 			link: ($scope, $element, attrs) ->
-        iconGroupCollection = new IconGroupCollection(attrs.groups);
-        $scope.availableIconClasses = iconGroupCollection.getClassArray();
-        $scope.availableIconClassesDropdown = iconGroupCollection.getDropdownDataArray($scope.setIconClass);
-        $scope.iconClass = attrs.value ? $scope.availableIconClasses[0];
-        $scope.setIconClass = (e) ->
-          $scope.iconClass = e.$parent.item.class;
-        # setup two way bindings between $scope.iconClass and $scope.model
+				iconGroupCollection = new IconGroupCollection(attrs.groups);
+				$scope.availableIconClasses = iconGroupCollection.getClassArray();
+				$scope.setIconClass = (e) -> 
+					$scope.iconClass = e.$parent.item.class;
+				$scope.availableIconClassesDropdown = iconGroupCollection.getDropdownDataArray($scope.setIconClass);
+				$scope.iconClass = attrs.value ? $scope.availableIconClasses[0]
+				# setup two way bindings between $scope.iconClass and $scope.model
 				# when ng-model is found in the DOM attribute.
 				if attrs.ngModel
 					$scope.model = $scope[attrs.ngModel];
@@ -80,6 +80,5 @@ umd this, (angular) ->
 						$scope.iconClass = $scope.model;
 
 				$scope.$dropdownButton = $element.find("button").eq(0);
-
 				$scope.disabled = attrs.disabled?;
 	]

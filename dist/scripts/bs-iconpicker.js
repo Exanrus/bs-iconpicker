@@ -141,7 +141,7 @@
             cls = this.getClassArray();
             dropdown = [];
             for (i in cls) {
-              classes.push({
+              dropdown.push({
                 "class": cls[i],
                 "text": "<span class=\"" + cls[i] + "\"></span>",
                 "click": clickAction
@@ -198,7 +198,7 @@
     module = angular.module("bs-iconpicker/directives/bs-iconpicker", ["bs-iconpicker/services/IconGroupCollection", "bs-iconpicker/templates/iconpicker"]);
     return module.directive("bsIconpicker", [
       "IconGroupCollection", function(IconGroupCollection) {
-        ({
+        return {
           replace: true,
           restrict: "E",
           scope: {
@@ -210,24 +210,24 @@
             var iconGroupCollection, _ref;
             iconGroupCollection = new IconGroupCollection(attrs.groups);
             $scope.availableIconClasses = iconGroupCollection.getClassArray();
-            $scope.availableIconClassesDropdown = iconGroupCollection.getDropdownDataArray($scope.setIconClass);
-            $scope.iconClass = (_ref = attrs.value) != null ? _ref : $scope.availableIconClasses[0];
-            return $scope.setIconClass = function(e) {
+            $scope.setIconClass = function(e) {
               return $scope.iconClass = e.$parent.item["class"];
             };
+            $scope.availableIconClassesDropdown = iconGroupCollection.getDropdownDataArray($scope.setIconClass);
+            $scope.iconClass = (_ref = attrs.value) != null ? _ref : $scope.availableIconClasses[0];
+            if (attrs.ngModel) {
+              $scope.model = $scope[attrs.ngModel];
+              $scope.$watch("iconClass", function() {
+                return $scope.model = $scope.iconClass;
+              });
+              $scope.$watch("model", function() {
+                return $scope.iconClass = $scope.model;
+              });
+            }
+            $scope.$dropdownButton = $element.find("button").eq(0);
+            return $scope.disabled = attrs.disabled != null;
           }
-        });
-        if (attrs.ngModel) {
-          $scope.model = $scope[attrs.ngModel];
-          $scope.$watch("iconClass", function() {
-            return $scope.model = $scope.iconClass;
-          });
-          $scope.$watch("model", function() {
-            return $scope.iconClass = $scope.model;
-          });
-        }
-        $scope.$dropdownButton = $element.find("button").eq(0);
-        return $scope.disabled = attrs.disabled != null;
+        };
       }
     ]);
   });

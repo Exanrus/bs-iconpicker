@@ -1,0 +1,209 @@
+/**
+           * bs-iconpicker
+           *
+           * @version   v0.0.1
+           * @author    Max Manets <manets@gmail.com>
+           * @copyright Copyright (c) 2014 Max Manets <manets@gmail.com>
+           * @license   The MIT License (MIT)
+           *
+           * Based on
+           * ui-iconpicker
+           *
+           * @version   v0.1.4
+           * @author    Justin Lau <justin@tclau.com>
+           * @copyright Copyright (c) 2014 Justin Lau <justin@tclau.com>
+           * @license   The MIT License (MIT)
+           *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the 'Software'), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ * 
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ * 
+ * THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ */
+.bs-iconpicker.brand-default > button {
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
+}
+.bs-iconpicker.brand-default > button:hover, .bs-iconpicker.brand-default > button:focus, .bs-iconpicker.brand-default > button:active, .bs-iconpicker.brand-default > button.active, .open > .bs-iconpicker.brand-default > button.dropdown-toggle {
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+.bs-iconpicker.brand-default > button:active, .bs-iconpicker.brand-default > button.active, .open > .bs-iconpicker.brand-default > button.dropdown-toggle {
+  background-image: none;
+}
+.bs-iconpicker.brand-default > button.disabled, .bs-iconpicker.brand-default > button.disabled:hover, .bs-iconpicker.brand-default > button.disabled:focus, .bs-iconpicker.brand-default > button.disabled:active, .bs-iconpicker.brand-default > button.disabled.active, .bs-iconpicker.brand-default > button[disabled], .bs-iconpicker.brand-default > button[disabled]:hover, .bs-iconpicker.brand-default > button[disabled]:focus, .bs-iconpicker.brand-default > button[disabled]:active, .bs-iconpicker.brand-default > button[disabled].active, fieldset[disabled] .bs-iconpicker.brand-default > button, fieldset[disabled] .bs-iconpicker.brand-default > button:hover, fieldset[disabled] .bs-iconpicker.brand-default > button:focus, fieldset[disabled] .bs-iconpicker.brand-default > button:active, fieldset[disabled] .bs-iconpicker.brand-default > button.active {
+  background-color: #fff;
+  border-color: #ccc;
+}
+.bs-iconpicker.brand-default > button .badge {
+  color: #fff;
+  background-color: #333;
+}
+.bs-iconpicker.brand-primary > button {
+  color: #fff;
+  background-color: #428bca;
+  border-color: #357ebd;
+}
+.bs-iconpicker.brand-primary > button:hover, .bs-iconpicker.brand-primary > button:focus, .bs-iconpicker.brand-primary > button:active, .bs-iconpicker.brand-primary > button.active, .open > .bs-iconpicker.brand-primary > button.dropdown-toggle {
+  color: #fff;
+  background-color: #3071a9;
+  border-color: #285e8e;
+}
+.bs-iconpicker.brand-primary > button:active, .bs-iconpicker.brand-primary > button.active, .open > .bs-iconpicker.brand-primary > button.dropdown-toggle {
+  background-image: none;
+}
+.bs-iconpicker.brand-primary > button.disabled, .bs-iconpicker.brand-primary > button.disabled:hover, .bs-iconpicker.brand-primary > button.disabled:focus, .bs-iconpicker.brand-primary > button.disabled:active, .bs-iconpicker.brand-primary > button.disabled.active, .bs-iconpicker.brand-primary > button[disabled], .bs-iconpicker.brand-primary > button[disabled]:hover, .bs-iconpicker.brand-primary > button[disabled]:focus, .bs-iconpicker.brand-primary > button[disabled]:active, .bs-iconpicker.brand-primary > button[disabled].active, fieldset[disabled] .bs-iconpicker.brand-primary > button, fieldset[disabled] .bs-iconpicker.brand-primary > button:hover, fieldset[disabled] .bs-iconpicker.brand-primary > button:focus, fieldset[disabled] .bs-iconpicker.brand-primary > button:active, fieldset[disabled] .bs-iconpicker.brand-primary > button.active {
+  background-color: #428bca;
+  border-color: #357ebd;
+}
+.bs-iconpicker.brand-primary > button .badge {
+  color: #428bca;
+  background-color: #fff;
+}
+.bs-iconpicker.brand-success > button {
+  color: #fff;
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+}
+.bs-iconpicker.brand-success > button:hover, .bs-iconpicker.brand-success > button:focus, .bs-iconpicker.brand-success > button:active, .bs-iconpicker.brand-success > button.active, .open > .bs-iconpicker.brand-success > button.dropdown-toggle {
+  color: #fff;
+  background-color: #449d44;
+  border-color: #398439;
+}
+.bs-iconpicker.brand-success > button:active, .bs-iconpicker.brand-success > button.active, .open > .bs-iconpicker.brand-success > button.dropdown-toggle {
+  background-image: none;
+}
+.bs-iconpicker.brand-success > button.disabled, .bs-iconpicker.brand-success > button.disabled:hover, .bs-iconpicker.brand-success > button.disabled:focus, .bs-iconpicker.brand-success > button.disabled:active, .bs-iconpicker.brand-success > button.disabled.active, .bs-iconpicker.brand-success > button[disabled], .bs-iconpicker.brand-success > button[disabled]:hover, .bs-iconpicker.brand-success > button[disabled]:focus, .bs-iconpicker.brand-success > button[disabled]:active, .bs-iconpicker.brand-success > button[disabled].active, fieldset[disabled] .bs-iconpicker.brand-success > button, fieldset[disabled] .bs-iconpicker.brand-success > button:hover, fieldset[disabled] .bs-iconpicker.brand-success > button:focus, fieldset[disabled] .bs-iconpicker.brand-success > button:active, fieldset[disabled] .bs-iconpicker.brand-success > button.active {
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+}
+.bs-iconpicker.brand-success > button .badge {
+  color: #5cb85c;
+  background-color: #fff;
+}
+.bs-iconpicker.brand-info > button {
+  color: #fff;
+  background-color: #5bc0de;
+  border-color: #46b8da;
+}
+.bs-iconpicker.brand-info > button:hover, .bs-iconpicker.brand-info > button:focus, .bs-iconpicker.brand-info > button:active, .bs-iconpicker.brand-info > button.active, .open > .bs-iconpicker.brand-info > button.dropdown-toggle {
+  color: #fff;
+  background-color: #31b0d5;
+  border-color: #269abc;
+}
+.bs-iconpicker.brand-info > button:active, .bs-iconpicker.brand-info > button.active, .open > .bs-iconpicker.brand-info > button.dropdown-toggle {
+  background-image: none;
+}
+.bs-iconpicker.brand-info > button.disabled, .bs-iconpicker.brand-info > button.disabled:hover, .bs-iconpicker.brand-info > button.disabled:focus, .bs-iconpicker.brand-info > button.disabled:active, .bs-iconpicker.brand-info > button.disabled.active, .bs-iconpicker.brand-info > button[disabled], .bs-iconpicker.brand-info > button[disabled]:hover, .bs-iconpicker.brand-info > button[disabled]:focus, .bs-iconpicker.brand-info > button[disabled]:active, .bs-iconpicker.brand-info > button[disabled].active, fieldset[disabled] .bs-iconpicker.brand-info > button, fieldset[disabled] .bs-iconpicker.brand-info > button:hover, fieldset[disabled] .bs-iconpicker.brand-info > button:focus, fieldset[disabled] .bs-iconpicker.brand-info > button:active, fieldset[disabled] .bs-iconpicker.brand-info > button.active {
+  background-color: #5bc0de;
+  border-color: #46b8da;
+}
+.bs-iconpicker.brand-info > button .badge {
+  color: #5bc0de;
+  background-color: #fff;
+}
+.bs-iconpicker.brand-warning > button {
+  color: #fff;
+  background-color: #f0ad4e;
+  border-color: #eea236;
+}
+.bs-iconpicker.brand-warning > button:hover, .bs-iconpicker.brand-warning > button:focus, .bs-iconpicker.brand-warning > button:active, .bs-iconpicker.brand-warning > button.active, .open > .bs-iconpicker.brand-warning > button.dropdown-toggle {
+  color: #fff;
+  background-color: #ec971f;
+  border-color: #d58512;
+}
+.bs-iconpicker.brand-warning > button:active, .bs-iconpicker.brand-warning > button.active, .open > .bs-iconpicker.brand-warning > button.dropdown-toggle {
+  background-image: none;
+}
+.bs-iconpicker.brand-warning > button.disabled, .bs-iconpicker.brand-warning > button.disabled:hover, .bs-iconpicker.brand-warning > button.disabled:focus, .bs-iconpicker.brand-warning > button.disabled:active, .bs-iconpicker.brand-warning > button.disabled.active, .bs-iconpicker.brand-warning > button[disabled], .bs-iconpicker.brand-warning > button[disabled]:hover, .bs-iconpicker.brand-warning > button[disabled]:focus, .bs-iconpicker.brand-warning > button[disabled]:active, .bs-iconpicker.brand-warning > button[disabled].active, fieldset[disabled] .bs-iconpicker.brand-warning > button, fieldset[disabled] .bs-iconpicker.brand-warning > button:hover, fieldset[disabled] .bs-iconpicker.brand-warning > button:focus, fieldset[disabled] .bs-iconpicker.brand-warning > button:active, fieldset[disabled] .bs-iconpicker.brand-warning > button.active {
+  background-color: #f0ad4e;
+  border-color: #eea236;
+}
+.bs-iconpicker.brand-warning > button .badge {
+  color: #f0ad4e;
+  background-color: #fff;
+}
+.bs-iconpicker.brand-danger > button {
+  color: #fff;
+  background-color: #d9534f;
+  border-color: #d43f3a;
+}
+.bs-iconpicker.brand-danger > button:hover, .bs-iconpicker.brand-danger > button:focus, .bs-iconpicker.brand-danger > button:active, .bs-iconpicker.brand-danger > button.active, .open > .bs-iconpicker.brand-danger > button.dropdown-toggle {
+  color: #fff;
+  background-color: #c9302c;
+  border-color: #ac2925;
+}
+.bs-iconpicker.brand-danger > button:active, .bs-iconpicker.brand-danger > button.active, .open > .bs-iconpicker.brand-danger > button.dropdown-toggle {
+  background-image: none;
+}
+.bs-iconpicker.brand-danger > button.disabled, .bs-iconpicker.brand-danger > button.disabled:hover, .bs-iconpicker.brand-danger > button.disabled:focus, .bs-iconpicker.brand-danger > button.disabled:active, .bs-iconpicker.brand-danger > button.disabled.active, .bs-iconpicker.brand-danger > button[disabled], .bs-iconpicker.brand-danger > button[disabled]:hover, .bs-iconpicker.brand-danger > button[disabled]:focus, .bs-iconpicker.brand-danger > button[disabled]:active, .bs-iconpicker.brand-danger > button[disabled].active, fieldset[disabled] .bs-iconpicker.brand-danger > button, fieldset[disabled] .bs-iconpicker.brand-danger > button:hover, fieldset[disabled] .bs-iconpicker.brand-danger > button:focus, fieldset[disabled] .bs-iconpicker.brand-danger > button:active, fieldset[disabled] .bs-iconpicker.brand-danger > button.active {
+  background-color: #d9534f;
+  border-color: #d43f3a;
+}
+.bs-iconpicker.brand-danger > button .badge {
+  color: #d9534f;
+  background-color: #fff;
+}
+.bs-iconpicker.disabled > button, .bs-iconpicker[disabled] > button, fieldset[disabled] .bs-iconpicker > button {
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.bs-iconpicker > button > i {
+  padding-right: .5em;
+}
+.bs-iconpicker > ul.dropdown-menu {
+  height: 12.1em;
+  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 0.5em 0.5em;
+  width: 12.1em;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .bs-iconpicker > ul.dropdown-menu {
+    height: 15.1em;
+    width: 15.1em;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .bs-iconpicker > ul.dropdown-menu {
+    height: 23.1em;
+    width: 23.1em;
+  }
+}
+@media (min-width: 1200px) {
+  .bs-iconpicker > ul.dropdown-menu {
+    height: 23.1em;
+    width: 34.1em;
+  }
+}
+.bs-iconpicker > ul.dropdown-menu::-webkit-scrollbar {
+  width: 0.1em;
+}
+.bs-iconpicker > ul.dropdown-menu > li {
+  display: inline-block;
+}
+.bs-iconpicker > ul.dropdown-menu > li a {
+  padding: 0 0;
+}
+.bs-iconpicker > ul.dropdown-menu > li a span {
+  margin: 6px;
+}

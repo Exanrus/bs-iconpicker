@@ -92,23 +92,25 @@
 	}
 	
 	> ul.dropdown-menu {
-		max-height: 0.1em + ceil(2 * $iconpicker-dropdown-menu-padding-v + $iconpicker-rows-xs * ($iconpicker-button-height + 2 * $iconpicker-button-padding-v + 2 * $iconpicker-button-margin-v));
-		overflow-y: scroll;
+		height: 0.1em + ceil(2 * $iconpicker-dropdown-menu-padding-v + $iconpicker-rows-xs * ($iconpicker-button-height + 2 * $iconpicker-button-padding-v + 2 * $iconpicker-button-margin-v));
+        overflow: auto;
+        overflow-y: auto;
+        overflow-x: hidden;
 		padding: $iconpicker-dropdown-menu-padding;
 		width: 0.1em + ceil(2 * $iconpicker-dropdown-menu-padding-h + $iconpicker-cols-xs * ($iconpicker-button-width + 2 * $iconpicker-button-padding-h + 2 * $iconpicker-button-margin-h));
 
 		@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
-			max-height: 0.1em + ceil(2 * $iconpicker-dropdown-menu-padding-v + $iconpicker-rows-sm * ($iconpicker-button-height + 2 * $iconpicker-button-padding-v + 2 * $iconpicker-button-margin-v));
+			height: 0.1em + ceil(2 * $iconpicker-dropdown-menu-padding-v + $iconpicker-rows-sm * ($iconpicker-button-height + 2 * $iconpicker-button-padding-v + 2 * $iconpicker-button-margin-v));
 			width: 0.1em + ceil(2 * $iconpicker-dropdown-menu-padding-h + $iconpicker-cols-sm * ($iconpicker-button-width + 2 * $iconpicker-button-padding-h + 2 * $iconpicker-button-margin-h));
 		}
 
 		@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
-			max-height: 0.1em + ceil(2 * $iconpicker-dropdown-menu-padding-v + $iconpicker-rows-md * ($iconpicker-button-height + 2 * $iconpicker-button-padding-v + 2 * $iconpicker-button-margin-v));
+			height: 0.1em + ceil(2 * $iconpicker-dropdown-menu-padding-v + $iconpicker-rows-md * ($iconpicker-button-height + 2 * $iconpicker-button-padding-v + 2 * $iconpicker-button-margin-v));
 			width: 0.1em + ceil(2 * $iconpicker-dropdown-menu-padding-h + $iconpicker-cols-md * ($iconpicker-button-width + 2 * $iconpicker-button-padding-h + 2 * $iconpicker-button-margin-h));
 		}
 
 		@media (min-width: $screen-lg-min) {
-			max-height: 0.1em + ceil(2 * $iconpicker-dropdown-menu-padding-v + $iconpicker-rows-lg * ($iconpicker-button-height + 2 * $iconpicker-button-padding-v + 2 * $iconpicker-button-margin-v));
+			height: 0.1em + ceil(2 * $iconpicker-dropdown-menu-padding-v + $iconpicker-rows-lg * ($iconpicker-button-height + 2 * $iconpicker-button-padding-v + 2 * $iconpicker-button-margin-v));
 			width: 0.1em + ceil(2 * $iconpicker-dropdown-menu-padding-h + $iconpicker-cols-lg * ($iconpicker-button-width + 2 * $iconpicker-button-padding-h + 2 * $iconpicker-button-margin-h));
 		}
 
@@ -117,13 +119,13 @@
 		}
 
 		> li {
-			float: left;
+			display: inline-block;
 	
-			button {
-				height  : $iconpicker-button-height;
-				margin  : $iconpicker-button-margin;
+			a {
 				padding : $iconpicker-button-padding;
-				width   : $iconpicker-button-width;
+              span {
+                margin: 6px;
+              }
 			}
 
 		}
