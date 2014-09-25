@@ -207,3 +207,147 @@
 .bs-iconpicker > ul.dropdown-menu > li a span {
   margin: 6px;
 }
+
+.bs-symbol-A:before {
+  content: "A";
+}
+
+.bs-symbol-B:before {
+  content: "B";
+}
+
+.bs-symbol-C:before {
+  content: "C";
+}
+
+.bs-symbol-D:before {
+  content: "D";
+}
+
+.bs-symbol-E:before {
+  content: "E";
+}
+
+.bs-symbol-F:before {
+  content: "F";
+}
+
+.bs-symbol-G:before {
+  content: "G";
+}
+
+.bs-symbol-H:before {
+  content: "H";
+}
+
+.bs-symbol-I:before {
+  content: "I";
+}
+
+.bs-symbol-J:before {
+  content: "J";
+}
+
+.bs-symbol-K:before {
+  content: "K";
+}
+
+.bs-symbol-L:before {
+  content: "L";
+}
+
+.bs-symbol-M:before {
+  content: "M";
+}
+
+.bs-symbol-N:before {
+  content: "N";
+}
+
+.bs-symbol-O:before {
+  content: "O";
+}
+
+.bs-symbol-P:before {
+  content: "P";
+}
+
+.bs-symbol-Q:before {
+  content: "Q";
+}
+
+.bs-symbol-R:before {
+  content: "R";
+}
+
+.bs-symbol-S:before {
+  content: "S";
+}
+
+.bs-symbol-T:before {
+  content: "T";
+}
+
+.bs-symbol-U:before {
+  content: "U";
+}
+
+.bs-symbol-V:before {
+  content: "V";
+}
+
+.bs-symbol-W:before {
+  content: "W";
+}
+
+.bs-symbol-X:before {
+  content: "X";
+}
+
+.bs-symbol-Y:before {
+  content: "Y";
+}
+
+.bs-symbol-Z:before {
+  content: "Z";
+}
+
+.bs-symbol-0:before {
+  content: "0";
+}
+
+.bs-symbol-1:before {
+  content: "1";
+}
+
+.bs-symbol-2:before {
+  content: "2";
+}
+
+.bs-symbol-3:before {
+  content: "3";
+}
+
+.bs-symbol-4:before {
+  content: "4";
+}
+
+.bs-symbol-5:before {
+  content: "5";
+}
+
+.bs-symbol-6:before {
+  content: "6";
+}
+
+.bs-symbol-7:before {
+  content: "7";
+}
+
+.bs-symbol-8:before {
+  content: "8";
+}
+
+.bs-symbol-9:before {
+  content: "9";
+}
