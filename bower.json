@@ -1,7 +1,7 @@
 {
   "name": "bs-iconpicker",
   "description": "Bootstrap 3 Icon Picker for AngularJS",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "keywords": [
     "Bootstrap",
     "Font Awesome",
@@ -11,6 +11,10 @@
   ],
   "license": "MIT",
   "authers": [
+        {
+          "name": "Alex Stasyuk",
+          "email": "exanrus@gmail.com"
+        },
         {
             "name": "Max Manets",
             "email": "manets@gmail.com"
@@ -23,7 +27,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/m-mts/bs-iconpicker.git"
+    "url": "https://github.com/Exanrus/bs-iconpicker.git"
   },
   "dependencies": {
     "angular": "~1.2.16",
