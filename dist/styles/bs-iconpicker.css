@@ -230,7 +230,7 @@
 @media (min-width: 1200px) {
   .bs-iconpicker > ul.dropdown-menu {
     max-height: 23.1em;
-    width: 34.1em;
+    width: 21.1em;
   }
 }
 .bs-iconpicker > ul.dropdown-menu::-webkit-scrollbar {
