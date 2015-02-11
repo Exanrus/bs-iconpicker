@@ -147,7 +147,7 @@
             for (i in cls) {
               dropdown.push({
                 "class": cls[i],
-                "text": "<button class=\"btn btn-default\" type=\"button\" <span class=\"" + cls[i] + "\"></span></button>",
+                "text": "<button class=\"btn btn-default\" type=\"button\"><span class=\"" + cls[i] + "\"></span></button>",
                 "click": clickAction
               });
             }
