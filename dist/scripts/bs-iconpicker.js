@@ -147,7 +147,7 @@
             for (i in cls) {
               dropdown.push({
                 "class": cls[i],
-                "text": "<span class=\"" + cls[i] + "\"></span>",
+                "text": "<button class=\"btn btn-default\" type=\"button\" <span class=\"" + cls[i] + "\"></span></button>",
                 "click": clickAction
               });
             }
@@ -179,7 +179,7 @@
     module = angular.module("bs-iconpicker/templates/iconpicker", ["mgcrea.ngStrap.dropdown"]);
     return module.run([
       "$templateCache", function($templateCache) {
-        return $templateCache.put("templates/iconpicker.html", "<span class=\"btn-group bs-iconpicker\">\n  <button type=\"button\" class=\"btn\" data-html=\"true\" bs-dropdown=\"availableIconClassesDropdown\">\n    <i class=\"{{iconClass}}\"></i>\n    <span class=\"caret\"></span>\n  </button>\n  <input name=\"{{name}}\" type=\"hidden\" value=\"{{iconClass}}\" />\n</span>");
+        return $templateCache.put("templates/iconpicker.html", "<span class=\"btn-group bs-iconpicker\">\n  <button type=\"button\" class=\"btn btn-default dropdown-toggle\" data-html=\"true\" bs-dropdown=\"availableIconClassesDropdown\">\n    <i class=\"{{iconClass}}\"></i>\n    <span class=\"caret\"></span>\n  </button>\n  <input name=\"{{name}}\" type=\"hidden\" value=\"{{iconClass}}\" />\n</span>");
       }
     ]);
   });
